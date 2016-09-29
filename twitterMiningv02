@@ -108,8 +108,8 @@ for slice in results:
 save_json('slice',slice)
 '''
 
-#search through a list of hashtags
-quereies =  { '#Apple',
+#search through a list of hashtags, with lower case duplicates
+queries =  { '#Apple',
               '#apple',
               '#iPhone7',
               '#iphone7',
