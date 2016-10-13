@@ -1,3 +1,7 @@
+'''
+were still downloading whole tweets - alot of data is not being used
+'''
+
 import sys
 import time
 import datetime
