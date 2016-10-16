@@ -2,11 +2,11 @@
 #------------------------------------------------------------------
 # This code thankfully acknowledges the python from the book
 # "Mining the Social Web 2nd Edition
-# and the tutorials by Harrison on the youtube channel "sendex"
+# and the tutorials by Harrison on the youtube channel "sentdex"
 
-# this code (all) developed by daniel phillis
+# this code developed by daniel phillis with acknowledgements above
 # SID 2110633, FAN phil0411
-# with the help mentioned above
+# 
 #------------------------------------------------------------------
 
 #------------------------------------------------------------
@@ -16,7 +16,8 @@
 # ffrq dist is ordered form the most common words to the least
 
 #pickle is a way we can save pytohn objects and basically save time
- 
+# no piclingis done in this version
+#expect slow return of results - 5-10 mins !
 #------------------------------------------------------------
 
 import nltk
