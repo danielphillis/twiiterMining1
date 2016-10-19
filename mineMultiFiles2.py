@@ -95,7 +95,7 @@ def analyse_content(data, keywords, size, entityThreshold=3):
 	for w in data:
 		for k in keywords:
 			if ('' +k) in ('' + w):
-				#keywords[k] = keywords[k] + 1 #increase the value of key k
+				keywords[k] = keywords[k] + 1 #increase the value of key k
 				pass
 	
 	#print "keywords"
@@ -244,13 +244,15 @@ queries = ["#samsung","#Samsung",
 
 #assigned scores of 0 to all keys
 keywords = {#dictionary
-	"explo":0,
-	"fire":0,
-	"smok":0,
+	"explo":0,#handles explosion. exploded, exploding,explodes,explosive
+	"fir":0,#handles fire, firey
+	"smok":0,#handes smoke, smoked, smoking, smoker
 	"recall":0,
 	"stop":0,
-	"shelved":0,
-	"disastor":0
+	"shelve":0,# also handles shelved
+	"disastor":0, #also handles disastorous
+	"fail":0,#also handles faled, failure
+	"hospital":0
 }
 
 #keywords ={"reply":0}
