@@ -15,14 +15,14 @@
 # written on ubuntuMate v1.12.1 with python 2.7.12
 # probably wont work on Python version 3.x
 
-# script is looped over multiple quieries (from a predefined list)
+# script is looped over multiple quieries (from a hardcoded predefined list)
 # override queries to run on only one query - see comments below
 # ie queries = "#Hillary" vs ["query_one","query_two", "etc"]
 
-# a csv file is written per query
+# Only one csv file is now written for all queries as pposed to one per query
 
 # exisitng csv files are appened to if the same script is run more than once
-# possibly resulting in duplicate data
+# resulting in duplicate row titles (each queries results are on a row)
 
 # function for cleaning data called from with in analyse function
 # so as to maintian the correct data structures required by the functions
@@ -30,12 +30,11 @@
 
 # Analyse function pulls all text from the tweet
 
-# csv written contains words only - not a frequency analysis - this needs to be fixed
-# csv should be something that gephi can read
-# and function like an adjacency list
+# csv written contains a *nowmalised* (new) frequency analysis of keywords
+# - (the predefined list) the tally is divided by the total amoutn of words parsed
 
 # time in seconds is printed
-# resulting csv filesize can be printed - currently commented out
+# resulting csv filesize printin is omitted
 ################################################################################
 import sys
 import subprocess
