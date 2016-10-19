@@ -236,14 +236,13 @@ queries = ["#samsung","#Samsung",
 #queries = ["iWatch"]
 #queries = ["trump"]
 
-#load keywords form file
-keywordPath = '~/Documents/social/py/mining/'
+#load keywords from file
+#keywordPath = '~/Documents/social/py/mining/'
+#pos_keywords_f = open((keywordPath + 'sam_sent_pos'),'r').read().decode('utf-8')
 
-pos_keywords_f = open((keywordPath + 'sam_sent_pos'),'r').read().decode('utf-8')
-pos_keys = word_tokenize(pos_keywords_f)
+#pos_keys = word_tokenize(pos_keywords_f)
+
 #assigned scores of 0 to all keys
-
-
 keywords = {#dictionary
 	"explo":0,
 	"fire":0,
