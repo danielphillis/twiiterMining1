@@ -49,7 +49,7 @@ import argparse
 parser = argparse.ArgumentParser(description='Short sample app')
 # Declare an argument (`--algo`), telling that the corresponding value should be stored in the `algo` field, and using a default value if the argument isn't given
 parser.add_argument('--path', action="store", dest='path', 
-	default='../output/leg/aug/samsung/')
+	default='../output/Oct19/')
 # Now, parse the command line arguments and store the values in the `args` variable
 args = parser.parse_args()# Individual arguments can be accessed as attributes...
 #print("defualt path arg:" + args.path)
@@ -206,11 +206,15 @@ def writeCSVDict(fileName, tuples, total):
 	with io.open('{0}'.format(fileName),'a', encoding ='utf-8') as f:
 		for (k,v) in tuples.iteritems(): #
 			#normalise values over total ords parsed
-			fv = float(v)/(float(total))
+			fv = float(v)/(float(total)) * 100 #percent
 			mysum += v
-			f.write(unicode(str(k) + "\t\t" + str(fv) + "\n"))
-		f.write(unicode("\ntotal specified keywords found:\t" + str(mysum) + "\n"))	
-		f.write(unicode("\ntotal words parsed:\t" + str(total) + "\n"))
+			# word -> actual number -> normalised percentage
+			f.write(unicode(str(k) + "\t" + str(v) + "\t" + 
+str(fv) + "\n"))
+
+		#stats
+		f.write(unicode("\ntotal specified keywords found:\t" + str(mysum)))	
+		f.write(unicode("\ntotal words parsed:\t" + str(total)))
 	f.close()
 	print("* WroteFile :" + fil)
 
